@@ -1,0 +1,46 @@
+/*
+	Cascading style sheet file for the entire website
+*/
+
+body {
+	height: 99%;
+	width:	99%;
+}
+
+#books {
+	float: left;
+	height: 100%;
+	width:	49%;
+}
+
+#orders {
+	float: right;
+	height: 100%;
+	width:	49%;
+}
+
+thead > tr > td {
+	text-align: center;
+	font-weight: bold;
+}
+
+#FormErr {
+	color: red;
+}
+
+#Library {
+	float: 	left;
+	height: 100%;
+	width: 	49%;
+}
+
+#Cart {
+	float: 	right;
+	height:	100%;
+	width:	49%;
+}
+
+#Library table, #Cart table, #books table, #orders table {
+	height: 98%;
+	width:	98%;
+}
