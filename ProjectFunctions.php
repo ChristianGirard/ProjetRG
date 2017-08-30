@@ -100,8 +100,11 @@
 	}
 	
 	/*
-		Formats a decimal to a currency format (eg.1: 0011.00 = 11,00 $ | eg.2: 0,00 = Gratuit).
+		Formats a decimal to a currency format or from currency format to decimal format (eg.1: 0011.00 = 11,00 $ | eg.2: 0,00 = Gratuit).
 		-$decimal is the value to format.
+		-$formatToBD determines if $decimal is to be formated in the MySQL decimal format (eg.: 0011.00).
+			TRUE  = Formats from currency format to MySQL decimal format (6 digits with 2 precision digits).
+			FALSE = Formats from MySQL decimal format to currency format 
 	*/
 	function FormatCurrency($decimal, $formatToBD = false) {
 		if($formatToBD) {
