@@ -44,3 +44,16 @@ thead > tr > td {
 	height: 98%;
 	width:	98%;
 }
+
+#MainMenu {
+	display: table;
+}
+
+.MainMenuItem {
+	display: table-cell;
+	height: auto;
+	width: 20%;
+	text-align: center;
+	background-color: darkgrey;
+	padding: 0px 5px 0px 5px;
+}
