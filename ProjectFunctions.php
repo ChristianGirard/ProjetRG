@@ -135,6 +135,22 @@
 	}
 	
 	/*
+		Truncates every leading zeros until only one "0" is left before the "." character or until a digit other than "0" is met.
+		-$decimal is the value from which the "0" characters are truncated.
+	*/
+	function RemoveLeadingZeros($decimal) {
+		$value = strval($decimal);
+		for($i = 0; $i < strlen($value); ++$i) {
+			if ($value[$i] != '0') {
+				if ($value[$i] == '.') {
+					return substr($value, $i-1);
+				}
+				return substr($value, $i);
+			}
+		}
+	}
+	
+	/*
 		Lists every orders that are currently active (not "Canceled" or "Completed") in a table. 
 	*/
 	function ShowActiveOrders() {

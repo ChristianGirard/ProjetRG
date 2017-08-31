@@ -38,9 +38,9 @@
 		Code (10 caractères maximum): <br/>
 		<input type="text" name="Code" value="<?php echo $bookData["BookCode"]; ?>" size="10" maxlength="10"/>
 		<br/><br/>
-		Coût (ex.: 1234,56): <br/>
-		<input type="text" pattern="[0-9]{1,4}[.,][0-9]{2}" title="Le coût doit être un nombre à virgule et doit comporter 6 chiffres dont 2 après la virgule." 
-		name="Cost" value="<?php echo FormatCurrency($bookData["BookCost"]); ?>"/>
+		Coût (ex.: 1234.56): <br/>
+		<input type="text" pattern="[0-9]{1,4}[.][0-9]{2}" title="Le coût doit être un nombre à virgule et doit comporter 6 chiffres dont 2 après la virgule." 
+		name="Cost" value="<?php echo RemoveLeadingZeros($bookData["BookCost"]); ?>"/>
 		<br/><br/>
 		<input type="submit" value="Soumettre la modification"/>
 	</form>
